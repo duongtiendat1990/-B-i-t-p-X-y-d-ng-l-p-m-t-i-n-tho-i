@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nokia</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <td><p id="nokiaStatus">On</p></td>
+            <td><button type="button" id="nokiaPower" style="width: 100%" onclick="nokia.turnPower()">Power</button></td>
+        </tr>
+        <tr>
+            <td><p id="nokiaBattery">100</p></td>
+            <td><button type="button" id="nokiaCharge" onclick="nokia.charge();">Charge</button></td>
+        </tr>
+    </table>
+
+</div>
+<div>
+    <input type="text" id="nokiaMessage" oninput="nokia.draftMessage();">
+    <button type="button" onclick="nokia.sendMessage();">Send</button>
+</div>
+<div>
+    <table>
+        <tr>
+            <td><p style="display: none">Sent Messages</p></td>
+            <td><p style="display: none">Received Messages</p></td>
+        </tr>
+        <tr>
+            <td><textarea name="sentMsg" id="nokiaSentMsgs" cols="10" rows="30" style="display: none"></textarea></td>
+            <td><textarea name="receivedMsg" id="nokiaReceivedMsgs" cols="10" rows="30" style="display: none"></textarea></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <table>
+        <tr>
+            <td><p id="iphoneStatus">On</p></td>
+            <td><button type="button" id="iphonePower" style="width: 100%" onclick="iphone.turnPower()">Power</button></td>
+        </tr>
+        <tr>
+            <td><p id="iphoneBattery">100</p></td>
+            <td><button type="button" id="iphoneCharge" onclick="iphone.charge();">Charge</button></td>
+        </tr>
+    </table>
+
+</div>
+<div>
+    <input type="text" id="iphoneMessage" oninput="iphone.draftMessage();">
+    <button type="button" onclick="iphone.sendMessage();">Send</button>
+</div>
+<div>
+    <table>
+        <tr>
+            <td><p style="display: none">Sent Messages</p></td>
+            <td><p style="display: none">Received Messages</p></td>
+        </tr>
+        <tr>
+            <td><textarea name="sentMsg" id="iphoneSentMsgs" cols="10" rows="30" style="display: none"></textarea></td>
+            <td><textarea name="receivedMsg" id="iphoneReceivedMsgs" cols="10" rows="30" style="display: none"></textarea></td>
+        </tr>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
