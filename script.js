@@ -17,6 +17,7 @@ let Mobile = function (name) {
                 this.status = 'On';
                 document.getElementById((name +'Status')).innerHTML = 'On';
                 this.battery --;
+                document.getElementById((name +'Battery')).innerHTML = '' + this.battery;
                 break;
         }
     return status;
@@ -50,12 +51,12 @@ let Mobile = function (name) {
                 case 'nokia':
                     iphone.receivedMsgs.push(message + '\n');
                     document.getElementById(('iphone' +'ReceivedMsgs')).style.display ='block';
-                    document.getElementById(('iphone' +'ReceivedMsgs')).value += iphone.receivedMsgs[iphone.receivedMsgs.length-1]
+                    document.getElementById(('iphone' +'ReceivedMsgs')).value += iphone.receivedMsgs[iphone.receivedMsgs.length-1];
                 break;
                 case 'iphone':
                     nokia.receivedMsgs.push(message + '\n');
                     document.getElementById(('nokia' +'ReceivedMsgs')).style.display ='block';
-                    document.getElementById(('nokia' +'ReceivedMsgs')).value += nokia.receivedMsgs[nokia.receivedMsgs.length-1]
+                    document.getElementById(('nokia' +'ReceivedMsgs')).value += nokia.receivedMsgs[nokia.receivedMsgs.length-1];
                     break;
             }
             this.battery--;
